@@ -101,39 +101,36 @@ numberOfSellPut = 0
 
 with st.sidebar:
     st.title("Options and Share Parameters")
+    st.write("Created By Christopher Kurdoghlian")
+    st.markdown("---")
     st.write("Shares")
     sharePrice = st.number_input("Share Price", value=100.0, step=0.1)
     numberOfShares = st.number_input("Number Of Shares", value=1, step=1)
     numberOfShortShares = st.number_input("Number Of Short Shares", value=0, step=1)
-
     st.markdown("---")
     st.write("Bought Calls")
     strikeBuyCall = st.number_input("Strike Price Of Bought Call", value=110.0, step=0.1)
     contractCostBuyCall = st.number_input("Contract Cost Of Bought Call", value=5.0, step=0.1)
     numberOfBuyCall = st.number_input("Number Of Bought Call Contracts", value=0, step=1)
-
     st.markdown("---")
     st.write("Bought Puts")
     strikeBuyPut = st.number_input("Strike Price Of Bought Put", value=110.0, step=0.1)
     contractCostBuyPut = st.number_input("Contract Cost Of Bought Put", value=5.0, step=0.1)
     numberOfBuyPut = st.number_input("Number Of Bought Put Contracts", value=0, step=1)
-
     st.markdown("---")
     st.write("Sold Calls")
     strikeSellCall = st.number_input("Strike Price Of Sold Call", value=110.0, step=0.1)
     contractCostSellCall = st.number_input("Contract Cost Of Sold Call", value=5.0, step=0.1)
     numberOfSellCall = st.number_input("Number Of Sold Call Contracts", value=0, step=1)
-
     st.markdown("---")
     st.write("Sold Puts")
     strikeSellPut = st.number_input("Strike Price Of Sold Put", value=110.0, step=0.1)
     contractCostSellPut = st.number_input("Contract Cost Of Sold Put", value=5.0, step=0.1)
     numberOfSellPut = st.number_input("Number Of Sold Put Contracts", value=0, step=1)
-
     st.markdown("---")
     st.title("Graph Bounds")
     percentOff = st.number_input('Percent From Share Price', min_value=0.1, value=0.4, step=0.05)
-    
+   
 
 x = np.linspace(sharePrice * (1 - percentOff), sharePrice * (1 + percentOff), num=int(500))
 # number must be equal to the delta share price plotted plus one
