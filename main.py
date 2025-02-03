@@ -101,7 +101,7 @@ numberOfSellPut = 0
 
 with st.sidebar:
     st.title("Options and Share Parameters")
-    st.write("Created By Christopher Kurdoghlian")
+    st.write("Created By Christopher K")
     st.markdown("---")
     st.write("Shares")
     sharePrice = st.number_input("Share Price", value=100.0, step=0.1)
